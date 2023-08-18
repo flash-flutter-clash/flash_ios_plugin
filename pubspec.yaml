@@ -1,14 +1,16 @@
 name: flash_plugin
-description: A new Flutter project.
+description: A new Flutter plugin project.
 version: 0.0.1
 homepage:
 
 environment:
-  sdk: '>=2.19.6 <3.0.0'
-  flutter: ">=2.5.0"
+  sdk: '>=3.1.0 <4.0.0'
+  flutter: '>=3.3.0'
 
 dependencies:
   flutter:
+    sdk: flutter
+  flutter_web_plugins:
     sdk: flutter
   plugin_platform_interface: ^2.0.2
 
@@ -16,6 +18,12 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+
+platforms:
+  ios:
+  linux:
+  macos:
+  windows:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -34,10 +42,21 @@ flutter:
   # adding or updating assets for this project.
   plugin:
     platforms:
+      # android:
+      #   package: com.example.flash_plugin.flash_plugin
+      #   pluginClass: FlashPlugin
       ios:
         pluginClass: FlashPlugin
-    macos:
+      linux:
         pluginClass: FlashPlugin
+      macos:
+        pluginClass: FlashPlugin
+      windows:
+        pluginClass: FlashPluginCApi
+     
+
+
+  
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
