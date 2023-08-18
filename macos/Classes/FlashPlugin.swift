@@ -3,7 +3,7 @@ import FlutterMacOS
 
 public class FlashPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "flash_plugin", binaryMessenger: registrar.messenger)
+    let channel = FlutterMethodChannel(name: "FlashPlugin", binaryMessenger: registrar.messenger)
     let instance = FlashPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
